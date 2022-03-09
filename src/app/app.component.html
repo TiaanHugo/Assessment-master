@@ -7,8 +7,37 @@
     </div>
     <div class="row">
         <div class="col-5">
-            <button class="btn btn-primary pull-right add-office" id="newOffice"><span class="fa fa-plus"
+            <button class="btn btn-primary pull-right add-office" type="button" data-bs-toggle="modal"
+                data-bs-target="#newOfficeModal" id="newOffice"><span class="fa fa-plus"
                     style="color:white"></span></button>
         </div>
     </div>
+
+
+    <!-- The Modal -->
+    <div class="modal" id="newOfficeModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Add New Office</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <label for="officeName">Office Name: </label>
+                    <input id="officeName" type="text" class="form-control" (input)="updateOfficeName($event)">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
 </div>

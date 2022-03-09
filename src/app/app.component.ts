@@ -9,6 +9,8 @@ import {NgForm} from '@angular/forms';
 })
 export class AppComponent {
 
+  newOfficeName: string = '';
+
   offices: Office[] = [
     new Office(
       '1',
@@ -29,8 +31,9 @@ export class AppComponent {
   }
 
   updateOfficeName(event: any): void {
-    console.log(event);
+    this.newOfficeName = (<HTMLInputElement>event.target).value;
   }
+  
   constructor(){
   
   }
