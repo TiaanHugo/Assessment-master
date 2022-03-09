@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="col-xs-12">
+        <h3>All Offices</h3>
+    </div>
+    <div class="card" style="width: 23rem;">
+        <div class="card-body">
+            <div class="row">
+                <h3 class="card-title d-inline">{{element.Name}}<i class="fa fa-pencil pull-right"></i></h3>
+            </div>
+
+            <img src="assets/imgs/group.png" class="d-inline" title="group icons" style="width:2em; height:2em;">
+            <p class="card-subtitle mb-2 text-muted d-inline">{{element.Staff.length}} Staff Members in Office</p>
+
+            <hr>
+
+            <div data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+                aria-controls="collapseExample" style="justify-content: center; display: flex; cursor: pointer;">More
+                Info <i class="mt-1 ms-1 fa fa-angle-down"></i>
+            </div>
+            <div class="collapse" id="collapseExample">
+                <div class="card-body">
+                    <i class="fa fa-phone d-block">
+                        <span class="office-info-text">{{element.Tel}}</span>
+                    </i>
+                    <i class="fa fa-envelope mt-2 d-block">
+                        <span class="office-info-text">{{element.Email}}</span>
+                    </i>
+                    <i class="fa fa-users mt-2 d-block">
+                        <span class="office-info-text">Office Capacity: {{element.Capacity}}</span>
+                    </i>
+                    <i class="fa fa-map-pin mt-2 d-block">
+                        <span class="office-info-text">{{element.Address}}</span>
+                    </i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
