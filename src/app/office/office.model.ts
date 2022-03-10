@@ -8,6 +8,7 @@ export class Office {
     public Tel: string,
     public Email: string,
     public Capacity: number,
-    public Address: string
+    public Address: string,
+    public Color: string
   ) {}
 }

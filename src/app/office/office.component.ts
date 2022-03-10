@@ -16,9 +16,12 @@ export class OfficeComponent implements OnInit {
     Email: string;
     Capacity: number;
     Address: string;
+    Color: string;
   };
 
   constructor() {}
-
+  returnColor(): string {
+    return this.element.Color;
+  }
   ngOnInit(): void {}
 }
