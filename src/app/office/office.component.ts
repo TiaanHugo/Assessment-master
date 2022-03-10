@@ -19,9 +19,14 @@ export class OfficeComponent implements OnInit {
     Color: string;
   };
 
+  @Input('index') iteration;
+
   constructor() {}
   returnColor(): string {
     return this.element.Color;
+  }
+  getElementID(): string {
+    return this.element.ID;
   }
   ngOnInit(): void {}
 }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Employee } from './office/employee.model';
 import { Office } from './office/office.model';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -13,9 +14,10 @@ export class AppComponent {
   newOfficeAddress: string = '';
   newOfficeCap: string = '';
   newOfficeColor: string = '';
+
   offices: Office[] = [
     new Office(
-      '1',
+      '0',
       'First Office',
       [new Employee('1', 'Tiaan', 'vdm')],
       '0823649864',
@@ -26,7 +28,7 @@ export class AppComponent {
     ),
   ];
 
-  newOfficeID: number = this.offices.length + 1;
+  newOfficeID: number = this.offices.length;
   title = 'Assessment For Spenco';
 
   addOffice(): void {
@@ -45,7 +47,6 @@ export class AppComponent {
   }
   updateOfficeColor(event: any): void {
     this.newOfficeColor = (<HTMLInputElement>event.target).value;
-    console.log(this.newOfficeColor);
   }
   updateOfficeName(event: any): void {
     this.newOfficeName = (<HTMLInputElement>event.target).value;
